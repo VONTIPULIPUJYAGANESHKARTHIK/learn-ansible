@@ -1,0 +1,10 @@
+- first_name: "Pujya"
+  last_name: "karthik"
+  dob: 27-11-05
+
+  # - is for the list
+  adress:
+    - type: permanent
+      doorno: 123
+      socity: "rajiv gandhi nagar"
+      city: "bangalore"
