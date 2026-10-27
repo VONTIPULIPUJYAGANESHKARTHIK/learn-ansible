@@ -1,0 +1,7 @@
+- name: ping demo
+  host: localhost
+  connection: local #it will not expect credentials
+
+  tasks: # tasks == modules == collections
+    - name: ping localhost
+      ping:
