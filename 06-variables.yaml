@@ -6,4 +6,4 @@
   tasks:
     - name: print the vars
       debug:
-        msg: "Hi, I got {{pproperty}} from {{trainer}} and it will take {{duration}} to complete."
+        msg: "Hi, I got {{pproperty}} land"
