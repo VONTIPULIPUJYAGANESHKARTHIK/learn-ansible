@@ -1,0 +1,28 @@
+- name: course information
+  hosts: local
+  connecction: loacal
+  vars:
+    course: DevOps
+    level: Beginner
+    duration: 3 months
+    is_live: true
+    topics:
+      - Linux
+      - Ansible
+      - Docker
+      - Kubernetes
+    more_details:
+      trainer: Pujya
+      students: 10
+      months: 7
+    playbook:
+      - name: print course information
+        debug:
+          msg:
+            - Course: { { course } }
+              : { { course | type_debug } }
+            - Level: { { level } }
+            - Duration: { { duration } }
+            - Is Live: { { is_live } }
+            - Topics: { { topics } }
+            - More Details: { { more_details } }
