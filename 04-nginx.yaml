@@ -1,14 +1,15 @@
 - name: install and start nginx
   hosts: frontend
-  become: yes # providing sudo access
+  become: true # providing sudo access
   tasks:
     - name: install nginx
-      package:
+      ansible.builtin.package:
         name: nginx
         state: present
 
     - name: start nginx
-      service:
+      ansible.builtin.service:
         name: nginx
         state: started
-        enabled: yes
+        enabled: true
+
