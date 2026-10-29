@@ -7,5 +7,5 @@
         msg: "{{ item }}"
       loop:
         - Pujya
-        - Siva
-        - Kumar
+        - Ganesh
+        - Karthik
