@@ -1,14 +1,20 @@
 - name: shell vs command
   hosts: local
   connection: local
+
   tasks:
-    - name: test the command moudule
-      shell: cat/etc/passwd | grep ec2-user
+    - name: test the command module
+      shell: cat /etc/passwd | grep ec2-user
       register: ec2_user_output
 
     - name: print the output
       debug:
-        msg: { { "ec2_user_output" } }
-- name: get the files
-  shell: ls -l > /temp.files.txt
-  register: files_output
+        msg: "{{ ec2_user_output }}"
+
+    - name: get the files
+      shell: ls -l > /tmp/files.txt
+      register: files_output
+
+    - name: print files output
+      debug:
+        msg: "{{ files_output }}"
