@@ -9,3 +9,6 @@
     - name: print the output
       debug:
         msg: { { "ec2_user_output" } }
+- name: get the files
+  shell: ls -l > /temp.files.txt
+  register: files_output
